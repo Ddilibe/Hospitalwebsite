@@ -46,7 +46,7 @@ namespace SmartERP.Membership.Pages
 
         [HttpPost, JsonRequest]
         public Result<ServiceResponse> Login(LoginRequest request,
-            [FromServices] Serenity.Abstractions.IUserPasswordValidator passwordValidator,
+            [FromServices] IUserPasswordValidator passwordValidator,
             [FromServices] IUserRetrieveService userRetriever,
             [FromServices] IEmailSender emailSender = null)
         {
@@ -66,7 +66,7 @@ namespace SmartERP.Membership.Pages
 
                 var username = request.Username;
                 var result = passwordValidator.Validate(ref username, request.Password);
-                if (result == Serenity.ComponentModel.PasswordValidationResult.Valid)
+                if (result == PasswordValidationResult.Valid)
                 {
                     var principal = UserRetrieveService.CreatePrincipal(userRetriever, username, authType: "Password");
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal)

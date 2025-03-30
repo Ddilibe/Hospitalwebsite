@@ -20,7 +20,7 @@ namespace SmartERP.Membership.Pages
 
         [HttpPost, JsonRequest, ServiceAuthorize]
         public Result<ServiceResponse> ChangePassword(ChangePasswordRequest request,
-            [FromServices] Serenity.Abstractions.IUserPasswordValidator passwordValidator)
+            [FromServices] IUserPasswordValidator passwordValidator)
         {
             return this.InTransaction("Default", uow =>
             {
@@ -35,7 +35,7 @@ namespace SmartERP.Membership.Pages
 
                 var username = User.Identity?.Name;
 
-                if (passwordValidator.Validate(ref username, request.OldPassword) != Serenity.ComponentModel.PasswordValidationResult.Valid)
+                if (passwordValidator.Validate(ref username, request.OldPassword) != PasswordValidationResult.Valid)
                     throw new ValidationError("CurrentPasswordMismatch", Texts.Validation.CurrentPasswordMismatch.ToString(Localizer));
 
                 if (request.ConfirmPassword != request.NewPassword)

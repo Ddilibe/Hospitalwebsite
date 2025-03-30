@@ -5,7 +5,6 @@ using Serenity.Services;
 using SmartERP.HumanResource;
 using SmartERP.HumanResource.Entities;
 using System;
-using Serenity.Net.Entity;
 using System.Collections.Generic;
 using System.Data;
 using MyRequest = Serenity.Services.SaveRequest<SmartERP.Payroll.PayrollRow>;

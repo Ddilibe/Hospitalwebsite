@@ -45,7 +45,7 @@ namespace SmartERP.Payroll
         [DisplayName("Payment Date"), NotNull]
         public DateTime? PaymentDate
         {
-            get => Serenity.Data.Field.PaymentDate[this];
+            get => fields.PaymentDate[this];
             set => fields.PaymentDate[this] = value;
         }
 
