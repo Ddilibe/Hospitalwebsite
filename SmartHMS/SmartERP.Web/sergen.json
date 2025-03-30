@@ -1,0 +1,112 @@
+{
+  "RootNamespace": "SmartERP",
+  "ServerTypings": {
+    "LocalTexts": true
+  },
+  "Restore": {
+    "Exclude": [
+      "/wwwroot/Scripts/serenity/Serenity.CoreLib*.*"
+    ]
+  },
+  "Connections": [
+    {
+      "Key": "Default",
+      "Tables": [
+        {
+          "Tablename": "dbo.BedTypes",
+          "Identifier": "BedTypes",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.BookingSoruces",
+          "Identifier": "BookingSoruces",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.BookingTypes",
+          "Identifier": "BookingTypes",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Complementaries",
+          "Identifier": "Complementaries",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.FloorPlans",
+          "Identifier": "FloorPlans",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Floors",
+          "Identifier": "Floors",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Navigations",
+          "Identifier": "NavigationList",
+          "Module": "Administration",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomFacilities",
+          "Identifier": "RoomFacilities",
+          "Module": "RoomFacilities",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomFacilityTypes",
+          "Identifier": "RoomFacilityTypes",
+          "Module": "RoomFacilities",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomImages",
+          "Identifier": "RoomImages",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomReservationDetails",
+          "Identifier": "RoomReservationDetails",
+          "Module": "RoomReservations",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomReservations",
+          "Identifier": "RoomReservations",
+          "Module": "RoomReservations",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Rooms",
+          "Identifier": "Rooms",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomSizes",
+          "Identifier": "RoomSizes",
+          "Module": "RoomFacilities",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.RoomTypes",
+          "Identifier": "RoomTypes",
+          "Module": "RoomSettings",
+          "PermissionKey": "Administration:General"
+        }
+      ]
+    }
+  ],
+  "UpgradeInfo": {
+    "InitialType": "Community",
+    "InitialVersion": "5.0.49.2"
+  }
+}
